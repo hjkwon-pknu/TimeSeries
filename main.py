@@ -914,7 +914,8 @@ if eval_results:
     sns.set(style="whitegrid")
     # 한글 폰트 설정 (Windows 기준)
     if platform.system() == 'Windows':
-        plt.rcParams['font.family'] = 'Malgun Gothic'
+        plt.rc('font', family='NanumBarunGothic')  # 또는 다른 한글 폰트
+        plt.rcParams['axes.unicode_minus'] = False  # ✅ 음수 깨짐 방지
     metrics = ["R2", "Return", "MDD"]
     for metric in metrics:
         if not eval_df.empty:
