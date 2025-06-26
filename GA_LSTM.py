@@ -67,7 +67,7 @@ def mutate(individual, units_range, dropout_range, batch_size_options, mutation_
 
 
 def genetic_algorithm_search(X_train, y_train, X_val, y_val, seq_len, num_features, future_days,
-                             population_size=510, generations=20,
+                             population_size=50, generations=20,
                              units_range=[32, 64, 128],
                              dropout_range=(0.1, 0.3),
                              batch_size_options=[8, 16, 32]):
